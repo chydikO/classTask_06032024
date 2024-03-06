@@ -11,7 +11,7 @@ TemperatureDiary::TemperatureDiary(int m, int y) : month(m), year(y), numTempera
 }
 
 TemperatureDiary::~TemperatureDiary() {
-    delete[] temperatures; // Release memory
+    delete[] temperatures;
 }
 
 void TemperatureDiary::addTemperature(double temp) {
@@ -20,8 +20,8 @@ void TemperatureDiary::addTemperature(double temp) {
         newTemperatures[i] = temperatures[i];
     }
 
-    delete[] temperatures; // Release old memory
-    temperatures = newTemperatures; // Point to the new memory
+    delete[] temperatures;
+    temperatures = newTemperatures;
     temperatures[numTemperatures] = temp;
     numTemperatures++;
 }
